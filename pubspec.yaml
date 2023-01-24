@@ -12,8 +12,6 @@ dependencies:
   flutter:
     sdk: flutter
   get_it:
-    git:
-      url: https://github.com/fluttercommunity/get_it.git
 
 dev_dependencies:
   flutter_test:

@@ -56,12 +56,10 @@ packages:
   get_it:
     dependency: "direct main"
     description:
-      path: "."
-      ref: HEAD
-      resolved-ref: "2ac359ae47263eaf89419044de7a612dbaf3f99f"
-      url: "https://github.com/fluttercommunity/get_it.git"
-    source: git
-    version: "7.3.0"
+      name: get_it
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "7.2.0"
   matcher:
     dependency: transitive
     description:

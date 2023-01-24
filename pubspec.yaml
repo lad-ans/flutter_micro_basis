@@ -1,0 +1,22 @@
+name: flutter_micro_basis
+description: A package for microapps in Flutter
+version: 1.0.0
+publish_to: none
+homepage:
+
+environment:
+  sdk: ">=2.18.5 <3.0.0"
+  flutter:
+
+dependencies:
+  flutter:
+    sdk: flutter
+  get_it:
+    git:
+      url: https://github.com/fluttercommunity/get_it.git
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:

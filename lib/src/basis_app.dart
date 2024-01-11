@@ -1,17 +1,26 @@
-import 'package:flutter_micro_basis/flutter_micro_basis.dart';
+import 'package:flutter_micro_basis/flutter_micro_basis.dart' show MicroApp, Routing;
 
-abstract class BasisApp with Routing {
-  List<MicroApp> get modules;
+abstract class BasisApp with Routing, MicroApp {
+  List<MicroApp> get microApps;
 
-  void registerListener() {
-    if (modules.isNotEmpty) {
-      for (MicroApp m in modules) m.createListener();
+  void registerRouters() {
+    if (basisRoutes.isNotEmpty) routes.addAll(basisRoutes);
+    if (microApps.isNotEmpty) {
+      for (MicroApp microapp in microApps) {
+        routes.addAll(microapp.routes);
+      }
+    }
+  }
+
+  void configureListener() {
+    if (microApps.isNotEmpty) {
+      for (MicroApp m in microApps) m.createListener();
     }
   }
   
-  void injectionRegister() {
-    if (modules.isNotEmpty) {
-      for (MicroApp m in modules) m.injectionRegister();
+  void configureInjection() {
+    if (microApps.isNotEmpty) {
+      for (MicroApp m in microApps) m.injectionRegister();
     }
   }
 }

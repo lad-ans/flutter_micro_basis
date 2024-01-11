@@ -1,6 +1,6 @@
 import 'package:flutter_micro_basis/flutter_micro_basis.dart' show MicroApp, Routing;
 
-mixin BasisApp on MicroApp, Routing {
+abstract class BasisApp with MicroApp, Routing {
   List<MicroApp> get microApps;
 
   void registerRouters() {

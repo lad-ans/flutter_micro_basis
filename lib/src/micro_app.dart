@@ -1,6 +1,6 @@
 import '../flutter_micro_basis.dart';
 
-mixin MicroApp {
+abstract class MicroApp {
   String get name;
   Map<String, BasisRoute> get routes;
   void Function() get injectionRegister;
